@@ -1,6 +1,9 @@
+import PeopleResults from "../components/people/PeopleResults"
 const People = () => {
     return (
-        <div>People</div>
+        <>
+            <PeopleResults />
+        </>
     )
 }
 

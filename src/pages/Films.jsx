@@ -1,6 +1,9 @@
+import FilmsResults from "../components/films/FilmsResults"
 const Films = () => {
     return (
-        <div>Films</div>
+        <>
+            <FilmsResults />
+        </>
     )
 }
 
