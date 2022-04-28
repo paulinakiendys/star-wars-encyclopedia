@@ -5,7 +5,7 @@ const Pagination = ({ data, page, query, setSearchParams }) => {
             <div className="prev">
                 <Button
                     disabled={!data.previous}
-                    onClick={() => setSearchParams({query: query, page: page - 1})}
+                    onClick={() => setSearchParams({query, page: page - 1})}
                     variant="primary"
                 >Previous Page</Button>
             </div>
@@ -13,7 +13,7 @@ const Pagination = ({ data, page, query, setSearchParams }) => {
             <div className="next">
                 <Button
                     disabled={!data.next}
-                    onClick={() => setSearchParams({query: query, page: parseInt(page) + 1})}
+                    onClick={() => setSearchParams({query, page: parseInt(page) + 1})}
                     variant="primary"
                 >Next Page</Button>
             </div>

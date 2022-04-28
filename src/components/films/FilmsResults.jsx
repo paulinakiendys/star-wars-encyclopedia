@@ -21,10 +21,6 @@ const FilmsResults = () => {
     const query = searchParams.get('query')
     const page = searchParams.get('page')
 
-    useEffect(() => {
-        fetchFilms(query, page)
-    }, [query, page])
-
     const fetchFilms = async (query, page) => {
         const data = await swapi.getFilms(query, page)
         setData(data)
@@ -39,9 +35,6 @@ const FilmsResults = () => {
         if (!searchInput.length) {
             return
         }
-
-        // set page to 1
-        // @todo
 
         // set input value as query in URLSearchParams
         setSearchParams({ query: searchInput })
@@ -78,11 +71,19 @@ const FilmsResults = () => {
                             {
                                 hits.map((film) =>
                                 (
-                                    <FilmsItem key={getIdFromUrl(film.url)} film={film} />
+                                    <FilmsItem
+                                        key={getIdFromUrl(film.url)}
+                                        film={film}
+                                    />
                                 ))}
                         </Row>
 
-                        <Pagination data={searchResult} page={page} setSearchParams={setSearchParams} />
+                        <Pagination
+                            data={searchResult}
+                            page={page}
+                            query={query}
+                            setSearchParams={setSearchParams}
+                        />
                     </div>
                 )}
 
@@ -90,11 +91,19 @@ const FilmsResults = () => {
                     {
                         films.map((film) =>
                         (
-                            <FilmsItem key={getIdFromUrl(film.url)} film={film} />
+                            <FilmsItem
+                                key={getIdFromUrl(film.url)}
+                                film={film}
+                            />
                         ))
                     }
                 </Row>
-                <Pagination data={data} page={page} query={query} setSearchParams={setSearchParams} />
+                <Pagination
+                    data={data}
+                    page={page}
+                    query={query}
+                    setSearchParams={setSearchParams}
+                />
             </>
         )
     } else {

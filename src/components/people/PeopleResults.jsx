@@ -40,9 +40,6 @@ const PeopleResults = () => {
             return
         }
 
-        // set page to 1
-        // @todo
-
         // set input value as query in URLSearchParams
         setSearchParams({ query: searchInput })
     }
@@ -78,21 +75,37 @@ const PeopleResults = () => {
                             {
                                 hits.map((person) =>
                                 (
-                                    <PeopleItem key={getIdFromUrl(person.url)} person={person} />
+                                    <PeopleItem
+                                        key={getIdFromUrl(person.url)}
+                                        person={person}
+                                    />
                                 ))}
                         </Row>
 
-                        <Pagination data={searchResult} page={page} setSearchParams={setSearchParams} />
+                        <Pagination
+                            data={searchResult}
+                            page={page}
+                            query={query}
+                            setSearchParams={setSearchParams}
+                        />
                     </div>
                 )}
                 <Row xs={1} md={3} className="g-4">
                     {
                         people.map((person) =>
                         (
-                            <PeopleItem key={getIdFromUrl(person.url)} person={person} />
+                            <PeopleItem
+                                key={getIdFromUrl(person.url)}
+                                person={person}
+                            />
                         ))}
                 </Row>
-                <Pagination data={data} page={page} query={query} setSearchParams={setSearchParams} />
+                <Pagination
+                    data={data}
+                    page={page}
+                    query={query}
+                    setSearchParams={setSearchParams}
+                />
             </>
         )
     } else {
