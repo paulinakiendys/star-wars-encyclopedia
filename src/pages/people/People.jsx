@@ -1,4 +1,4 @@
-import PeopleResults from "../components/people/PeopleResults"
+import PeopleResults from "../../components/people/PeopleResults"
 const People = () => {
     return (
         <>

@@ -1,4 +1,4 @@
-import FilmsResults from "../components/films/FilmsResults"
+import FilmsResults from "../../components/films/FilmsResults"
 const Films = () => {
     return (
         <>

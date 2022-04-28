@@ -21,6 +21,10 @@ const FilmsResults = () => {
     const query = searchParams.get('query')
     const page = searchParams.get('page')
 
+    useEffect(() => {
+        fetchFilms(query, page)
+    }, [query, page])
+
     const fetchFilms = async (query, page) => {
         const data = await swapi.getFilms(query, page)
         setData(data)

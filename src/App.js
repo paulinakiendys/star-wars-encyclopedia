@@ -1,8 +1,10 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Films from "./pages/Films";
+import Film from "./pages/films/Film";
+import Films from "./pages/films/Films";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
-import People from "./pages/People";
+import People from "./pages/people/People";
+import Person from "./pages/people/Person";
 import Footer from "./components/layout/Footer";
 import Navbar from "./components/layout/Navigation";
 import 'bootstrap/dist/css/bootstrap.css'
@@ -18,7 +20,9 @@ function App() {
             <Routes>
               <Route path='/' element={<Home />} />
               <Route path='/films' element={<Films />} />
+              <Route path='/films/:id' element={<Film />} />
               <Route path='/people' element={<People />} />
+              <Route path='/people/:id' element={<Person />} />
               <Route path='/*' element={<NotFound />} />
             </Routes>
           </Container>
