@@ -1,4 +1,8 @@
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Films from "./pages/Films";
+import Home from "./pages/Home";
+import NotFound from "./pages/NotFound";
+import People from "./pages/People";
 import Footer from "./components/layout/Footer";
 import Navbar from "./components/layout/Navigation";
 import 'bootstrap/dist/css/bootstrap.css'
@@ -11,7 +15,12 @@ function App() {
         <Navbar />
         <main>
           <Container>
-            Content
+            <Routes>
+              <Route path='/' element={<Home />} />
+              <Route path='/films' element={<Films />} />
+              <Route path='/people' element={<People />} />
+              <Route path='/*' element={<NotFound />} />
+            </Routes>
           </Container>
         </main>
         <Footer />
