@@ -6,7 +6,6 @@ import { useNavigate } from "react-router-dom"
 import { getIdFromUrl } from "../../helpers"
 import LoadingSpinner from "../layout/LoadingSpinner"
 import LinkItem from "../layout/LinkItem"
-
 const FilmResults = () => {
     const { id } = useParams()
     const [film, setFilm] = useState([])
@@ -26,7 +25,7 @@ const FilmResults = () => {
 
     if (!loading) {
         return (
-            <Card>
+            <Card className="my-4">
                 <Card.Header>{film.title}</Card.Header>
                 <Card.Body>
                     <Card.Title>Attributes</Card.Title>
@@ -72,7 +71,7 @@ const FilmResults = () => {
                                 {
                                     film.characters.map((character) =>
                                     (
-                                        <LinkItem key={getIdFromUrl(character)} category={character} label="Character" />
+                                        <LinkItem key={getIdFromUrl(character)} category={character} label="Character" resource="people" />
                                     ))
                                 }
                             </ListGroup>
