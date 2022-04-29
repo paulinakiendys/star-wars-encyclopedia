@@ -1,12 +1,10 @@
 # star-wars-encyclopedia
 
-Simple [single-page application](http://fed21-game.herokuapp.com/) built using [React.js](https://reactjs.org/), [React Router v6](https://reactrouter.com/), [The Star Wars API](https://swapi.dev/), [axios](https://www.npmjs.com/package/axios) and styled using [React Bootstrap](https://react-bootstrap.github.io/). 
+Simple [single-page application](https://fed21-swapi.netlify.app/) built using [React.js](https://reactjs.org/), [React Router v6](https://reactrouter.com/), [The Star Wars API](https://swapi.dev/), [axios](https://www.npmjs.com/package/axios) and styled using [React Bootstrap](https://react-bootstrap.github.io/). 
 
 ## Table of contents
 * [Requirements](#requirements)
-* [Knowledge](#knowledge)
 * [Screenshots](#screenshots)
-* [Specification](#specification)
 * [Timeline](#timeline)
 
 ## Requirements
