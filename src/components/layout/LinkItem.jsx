@@ -4,7 +4,7 @@ import { getIdFromUrl } from "../../helpers"
 import { Link } from "react-router-dom"
 const LinkItem = ({ category, label, resource }) => {
     return (
-        <ListGroup.Item>
+        <ListGroup.Item className='bg-dark'>
             <Button
                 as={Link}
                 to={`/${resource}/${getIdFromUrl(category)}`}

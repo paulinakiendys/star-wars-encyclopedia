@@ -37,13 +37,14 @@ const PeopleResults = () => {
 
     // react to changes in URLSearchParams
     useEffect(() => {
+        setLoading(true)
         fetchPeople(query, page)
     }, [query, page])
 
     if (!loading) {
         return (
             <>
-                <h1 className="mt-4">People</h1>
+                <h1>People</h1>
 
                 <SearchForm
                     handleSubmit={handleSubmit}

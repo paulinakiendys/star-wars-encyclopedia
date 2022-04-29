@@ -8,6 +8,7 @@ const SearchForm = ({ handleSubmit, searchInput, setSearchInput }) => {
                     placeholder="Enter search"
                     type="text"
                     value={searchInput}
+                    className="bg-dark dark-border text-light"
                 />
                 <Button variant="success" type="submit" disabled={!searchInput.length}>
                     Search

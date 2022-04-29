@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { Container, Nav, Navbar } from "react-bootstrap"
 const Navigation = ({ title }) => {
     return (
-        <Navbar bg="dark" variant="dark" expand="md">
+        <Navbar variant="dark" expand="md" className='dark-grey shadow p-3 mb-5'>
             <Container>
                 <Navbar.Brand as={Link} to="/">🛸 {title}</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />

@@ -43,7 +43,7 @@ const FilmsResults = () => {
     if (!loading) {
         return (
             <>
-                <h1 className="mt-4">Films</h1>
+                <h1>Films</h1>
 
                 <SearchForm
                     handleSubmit={handleSubmit}

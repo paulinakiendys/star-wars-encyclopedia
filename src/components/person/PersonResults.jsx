@@ -25,7 +25,7 @@ const PersonResults = () => {
 
     if (!loading) {
         return (
-            <Card className="my-4">
+            <Card className="my-4 dark-grey shadow">
                 <Card.Header>{person.name}</Card.Header>
                 <Card.Body>
                     <Card.Title>Attributes</Card.Title>
